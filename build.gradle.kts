@@ -80,9 +80,8 @@ tasks {
 
     runIde {
         val projectPath = System.getenv("TEST_PROJECT") ?: ""
-        args (projectPath)
+        args(projectPath)
     }
-
 
     patchPluginXml {
         version(properties("pluginVersion"))
