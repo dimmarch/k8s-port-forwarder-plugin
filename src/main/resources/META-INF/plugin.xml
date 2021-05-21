@@ -1,19 +1,25 @@
 <idea-plugin>
-    <id>org.jetbrains.plugins.template</id>
-    <name>Template</name>
-    <vendor>JetBrains</vendor>
+    <id>dev.marchuk.k8s-port-forwarder</id>
+    <name>Kubernetes Port Forwarder</name>
+    <version>0.0.1</version>
+    <vendor email="dimmarch@gmail.com" url="https://github.com/dimmarch/k8s-port-forwarder-plugin">
+        Dmitriy Marchuk
+    </vendor>
+
+    <description>
+        Intellij IDEA plugin for for easy port forwarding between k8s services and your local machine
+    </description>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="org.jetbrains.plugins.template.services.MyApplicationService"/>
-        <projectService serviceImplementation="org.jetbrains.plugins.template.services.MyProjectService"/>
+        <applicationService serviceImplementation="dev.marchuk.k8s.portforwarder.services.ApplicationService"/>
+        <projectService serviceImplementation="dev.marchuk.k8s.portforwarder.services.ProjectService"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="org.jetbrains.plugins.template.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
+
     </applicationListeners>
 </idea-plugin>
