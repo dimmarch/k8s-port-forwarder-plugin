@@ -2,6 +2,8 @@
 
 # Kubernetes Port Forwarder Plugin Changelog
 
-## [0.0.1]
+## [Unreleased]
+
+## [0.0.1] 
 ### Added
 - Init project from plugin template
